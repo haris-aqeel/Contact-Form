@@ -16,7 +16,7 @@ app.post("/", async(req, res)=> {
 
     
     await sendMail(email, name, subject, message ,function(err, data) {
-        console.log(err)
+        console.log(err,data)
         try{
             res.status({ message: 'Email sent!!!' });
         
